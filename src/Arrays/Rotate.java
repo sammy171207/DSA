@@ -4,6 +4,7 @@ public class Rotate {
     static  int [] rotatebyk(int []arr_1,int k){
         int n =arr_1.length;
         k=k%n;
+//       k=3
         int []ans=new int[n];
         int j=0;
         for(int i=n-k;i<n;i++){
