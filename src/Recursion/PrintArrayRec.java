@@ -5,6 +5,7 @@ public class PrintArrayRec {
         //base case
         int n=arr.length;
         if(idx==n){
+            System.out.println("");
             return ;
         }
         System.out.print(arr[idx]+"-");
@@ -22,7 +23,7 @@ public class PrintArrayRec {
 
     static void sumOfArray(int []arr,int idx,int sum){
         if(idx==arr.length){
-            System.out.println(sum);
+            System.out.println("Sum of element :"+sum);
             return ;
         }
         sum+=arr[idx];
