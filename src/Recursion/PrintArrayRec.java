@@ -31,9 +31,10 @@ public class PrintArrayRec {
 
     }
     public static void main(String[] args) {
-  int [] arr={1,2,3,4,6,7};
-  print(arr,0);
-  maxValue(arr,0,0);
-  sumOfArray(arr,0,0);
+
+    int [] arr={1,2,3,4,6,7};
+    print(arr,0);
+    maxValue(arr,0,0);
+    sumOfArray(arr,0,0);
     }
 }
