@@ -38,7 +38,7 @@ The repository is organized into folders, each representing a specific topic in 
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/username/dsa-practice.git
+   git clone https://github.com/sammy171207/DSA.git
    ```
 
 2. Navigate to the desired topic folder.
