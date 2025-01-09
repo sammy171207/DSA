@@ -84,4 +84,4 @@ This is a personal project, but suggestions or contributions are welcome! Feel f
 
 ---
 
-Let me know if you'd like further customization!
+
