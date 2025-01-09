@@ -12,6 +12,7 @@ public class SSQ {
             return ans;
         }
         char curr=s.charAt(0);
+        //recursive work
         ArrayList<String>smallans=order(s.substring(1));
         for(String ss:smallans){
             ans.add(ss);
