@@ -21,10 +21,23 @@ public class SSQ {
 
         return ans;
     }
+
+    static void prindSSQ(String s,String currAns){
+        if(s.length()==0){
+            System.out.println(currAns);
+            return;
+        }
+        char currChar=s.charAt(0);
+        String remString=s.substring(1);
+        prindSSQ(remString,currAns+currChar);
+        prindSSQ(remString,currAns);
+    }
     public static void main(String[] args) {
-        ArrayList<String>ans=new ArrayList<>();
-      ans= order("abc");
-        System.out.println(ans);
+//        ArrayList<String>ans=new ArrayList<>();
+//      ans= order("abc");
+//        System.out.println(ans);
+        prindSSQ("abc"," ");
+
     }
 }
 
