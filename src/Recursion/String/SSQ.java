@@ -32,12 +32,24 @@ public class SSQ {
         prindSSQ(remString,currAns+currChar);
         prindSSQ(remString,currAns);
     }
+
+    static  void subsetSum(int[]a,int n, int idx,int sum){
+        if(idx>=n){
+            System.out.println(sum);
+            return;
+        }
+        subsetSum(a,n,idx+1,sum+a[idx]);
+        subsetSum(a,n,idx+1,sum);
+    }
+
+
     public static void main(String[] args) {
 //        ArrayList<String>ans=new ArrayList<>();
 //      ans= order("abc");
 //        System.out.println(ans);
         prindSSQ("abc"," ");
-
+//        int []arr={2,4,5};
+//        subsetSum(arr,arr.length,0,0);
     }
 }
 
