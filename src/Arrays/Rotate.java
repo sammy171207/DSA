@@ -56,10 +56,11 @@ public class Rotate {
     }
 
     public static void main(String[] args) {
-        int []arr={1,2,3,4,5,6};
+//        int []arr={1,2,3,4,5,6};
         int k=3;
-        int []ans=rotatebyk(arr,k);
-        printArray(ans);
+        System.out.println(k%6);
+//        int []ans=rotatebyk(arr,k);
+//        printArray(ans);
 
     }
 }

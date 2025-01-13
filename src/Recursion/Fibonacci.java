@@ -16,7 +16,7 @@ public class Fibonacci {
 
     public static void main(String[] args)  {
 
-        int o= factorial(4);
+        int o= factorial(5);
         System.out.println("Factorial Number :"+o);
         int fab=fibonaci(5);
         System.out.println("Fibonacci Number : "+fab);
