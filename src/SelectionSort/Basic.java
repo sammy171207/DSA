@@ -26,6 +26,7 @@ public class Basic {
                     min_idx=j;
                 }
             }
+
             int temp=arr[i];
             arr[i]=arr[min_idx];
             arr[min_idx]=temp;
