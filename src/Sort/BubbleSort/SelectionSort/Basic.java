@@ -1,4 +1,4 @@
-package SelectionSort;
+package Sort.BubbleSort.SelectionSort;
 
 public class Basic {
     static  int minMum(int[]arr){
