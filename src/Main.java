@@ -5,23 +5,17 @@ import java.util.*;
 class Main {
     public static void main(String args[] ) throws Exception {
         //BufferedReader
-        Scanner shub=new Scanner(System.in);
-        String s=shub.nextLine();
+        int month,day,year;
+        Scanner sc=new Scanner(System.in);
+        month=sc.nextInt();
+        day=sc.nextInt();
+        year=sc.nextInt();
 
-        char[] ch=s.toCharArray();
-        shub.nextLine();
-        int n=shub.nextInt();
-
-
-        for(int i=0;i<s.length();i++){
-            char c=s.charAt(i);
-
-            if(c>='a' && c<='z' || c>='A'&&c<='Z'||c>='0'&&c<='9'){
-                System.out.print((char)(c+n));
-            }else{
-                System.out.print(c);
-            }
-        }
+       Calendar calendar=Calendar.getInstance();
+       calendar.set(year,month-1,day);
+       int dayOfWeek=calendar.get(Calendar.DAY_OF_WEEK);
+       String  []days={"SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"};
+       
     }
 }
 

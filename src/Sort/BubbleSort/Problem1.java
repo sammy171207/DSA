@@ -3,11 +3,17 @@ package Sort.BubbleSort;
 public class Problem1 {
     static  int[] sortedIn(int[]arr){
         for(int i=0;i<arr.length;i++){
+            boolean flag=false;
             for(int j=0;j<arr.length-i-1;j++){
                 if(arr[j]==0 & arr[j+1]!=0){
                     int temp=arr[j];
                     arr[j]=arr[j+1];
-                    arr[j+1]=temp;                }
+                    arr[j+1]=temp;
+                    flag=true;
+                }
+            }
+            if(!flag){
+                return arr;
             }
         }
         return  arr;
