@@ -1,5 +1,6 @@
 package Sort.BubbleSort;
-
+/// this is question  where we use the bubble sort algorithm and set all the zero at the end of the array
+/// key point the loop second loop is iterate arr.length-i-1; which means the last  element is always sorted so is any operation perform on the last element then use the bubble sort
 public class Problem1 {
     static  int[] sortedIn(int[]arr){
         for(int i=0;i<arr.length;i++){
