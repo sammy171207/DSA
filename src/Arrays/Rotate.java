@@ -1,5 +1,7 @@
 package Arrays;
 
+import java.util.ArrayList;
+
 public class Rotate {
     static  int [] rotatebyk(int []arr_1,int k){
         int n =arr_1.length;
@@ -38,6 +40,14 @@ public class Rotate {
         }
         return arr_1;
     }
+    static ArrayList<Long>reverse(ArrayList<Long>arr){
+        int i=0; int j= arr.size()-1;
+        int idx=0;
+        while (i<j){
+
+        }
+        return arr;
+    }
 
 
     static  void rotatebykIn(int[]arr_1,int k){
@@ -54,13 +64,37 @@ public class Rotate {
         }
         System.out.println();
     }
+    static  void swapList(ArrayList<Long>arr,int i,int j){
+        Long temp= arr.get(i);
+        arr.set(i, arr.get(j));
+        arr.set(j,temp);
+    }
+
+    static void reverseInGroup(ArrayList<Long>arr,int k){
+        int size= arr.size();
+        k=k%size;
+        swapList(arr,size-k,size);
+        swapList(arr,0,size-k-1);
+
+    }
 
     public static void main(String[] args) {
-//        int []arr={1,2,3,4,5,6};
+        long []arr={1, 2, 3, 4, 5};
         int k=3;
-        System.out.println(k%6);
-//        int []ans=rotatebyk(arr,k);
-//        printArray(ans);
+        ArrayList<Long> li =new ArrayList<>();
+        for(long x:arr){
+            li.add(x);
+        }
+        reverseInGroup(li,k);
+
+        System.out.println("list: "+li);
+        System.out.println(li.size());
+
+//      reverseInGroup(li,k);
+//        System.out.println(k%6);
+////        int []ans=rotatebyk(arr,k);
+////        printArray(ans);
+
 
     }
 }
