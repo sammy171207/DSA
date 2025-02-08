@@ -52,6 +52,7 @@ public class Basic {
         for (int x : arr) {
             System.out.print(x + " "); // Print the sorted array
         }
+        System.out.println();
         System.out.println("-------------------");
         quickSort(arr, 0, arr.length - 1); // Sort the array
         for (int x : arr) {

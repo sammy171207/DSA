@@ -1,5 +1,8 @@
 package Sort.CoutSort;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Basic {
 
     static int max(int[] arr) {
@@ -55,12 +58,50 @@ public class Basic {
         }
     }
 
+    static void bucketSort(int[] arr) {
+        int n = arr.length;
+        if (n <= 0)
+            return;
 
+        // Create empty buckets
+        ArrayList<Integer>[] buckets = new ArrayList[n];
+        for (int i = 0; i < n; i++) {
+            buckets[i] = new ArrayList<>();
+        }
+
+        // Find maximum value to determine the range of the bucket index
+        int maxValue = Integer.MIN_VALUE;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > maxValue) {
+                maxValue = arr[i];
+            }
+        }
+
+        // Add elements into our buckets
+        for (int i = 0; i < n; i++) {
+            int bucketIndex = (arr[i] * n) / (maxValue + 1);
+            buckets[bucketIndex].add(arr[i]);
+        }
+
+        // Sort each bucket individually
+        for (int i = 0; i < buckets.length; i++) {
+            Collections.sort(buckets[i]);
+        }
+
+        // Merge all buckets to get the final sorted array
+        int idx = 0;
+        for (int i = 0; i < buckets.length; i++) {
+            for (int j = 0; j < buckets[i].size(); j++) {
+                arr[idx++] = buckets[i].get(j);
+            }
+        }
+    }
     public static void main(String[] args) {
     int []arr={12, 45, 78, 23, 56, 89, 34, 67, 100, 29};
 //    int ma=max(arr);
 //        System.out.println(ma);
-    radixSort(arr);
+//    radixSort(arr);
+        bucketSort(arr);
         for(int x:arr){
             System.out.print(x+" ");
         }
