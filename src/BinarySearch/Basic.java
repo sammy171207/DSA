@@ -17,9 +17,25 @@ public class Basic {
       }
       return false;
     }
+
+    static  boolean reverseWay(int[]arr,int st,int ed,int target){
+        if(st>ed) return false;
+        int mid=(st+ed)/2;
+        if(target==arr[mid]){
+            return  true;
+        }
+        else if(target<arr[mid]){
+           return reverseWay(arr,st,mid-1,target);
+        }
+        else{
+           return reverseWay(arr,mid+1,ed,target);
+        }
+    }
     public static void main(String[] args) {
-  int []a={1,3,4,5,6,7,8,9};
-  boolean ans=search(a,11);
+  int []arr={1,3,4,5,6,7,8,9};
+  boolean ans=search(arr,8);
         System.out.println(ans);
+        boolean reverseans=reverseWay(arr,0, arr.length-1, 8);
+        System.out.println(reverseans);
     }
 }
