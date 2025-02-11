@@ -41,12 +41,40 @@ public class PSC3 {
             result.add(-1);
             return result ;
         }
+
+    static int longestSubarray(int[] arr,int o) {
+         int longsublen=0;
+       for(int i=0;i<arr.length;i++){
+           for(int j=i;j<arr.length;j++){
+               int sum=0;  int cnt=0;
+               for(int k=i;k<=j;k++){
+                   sum+=arr[k];
+                   System.out.print(arr[k] +" ");
+
+                   cnt++;
+                   if(sum==o){
+                       if(longsublen<cnt){
+                           longsublen=cnt;
+                       }
+                   }
+
+
+               }
+
+               System.out.println("sum "+sum);
+           }
+       }
+        return longsublen;
+    }
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 7, 5};
-        int target=12;
-        ArrayList<Integer> ans = approach2(arr,target);
-         for(int x:ans){
-             System.out.print(x+" ");
-         }
+//        int[] arr = {1, 2, 3, 7, 5};
+//        int target=12;
+//        ArrayList<Integer> ans = approach2(arr,target);
+//         for(int x:ans){
+//             System.out.print(x+" ");
+//         }
+        int arr[] = {10, -10, 20, 30} ;
+        int target=5;
+        longestSubarray(arr,target);
     }
 }
