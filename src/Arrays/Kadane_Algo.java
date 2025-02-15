@@ -33,6 +33,8 @@ public class Kadane_Algo {
 //               maxSubarraySum(arr1);
 //               int arr2[]={5, 4, 1, 7, 8};
 //               maxSubarraySum(arr2);
+        int ans1=maxSubarraySum(arr);
+        System.out.println(ans1);
         int ans=optimalop(arr);
         System.out.println(ans);
     }
