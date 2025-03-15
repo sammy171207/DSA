@@ -16,6 +16,7 @@ public class Occurence {
              for(int j=i+1;j<str.length();j++){
                  if(str.charAt(i)==str.charAt(j)){
                    set.add(str.charAt(i));
+                   break;
                  }
              }
          }
@@ -40,7 +41,7 @@ public class Occurence {
     public static void main(String[] args) {
   String str="geeksforgeeks";
 
-        System.out.println(firstRep("geeksforgeeks")); // Output: g
+        System.out.println(firstrep("geeksforgeeks")); // Output: g
         System.out.println(firstRep("abcdef"));        // Output: #
         System.out.println(firstRep("abca"));
     }

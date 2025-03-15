@@ -47,6 +47,8 @@ public class LongestSubArrayOfK {
     public static void main(String[] args) {
         int[]arr={-5, 8, -14, 2, 4, 12};
         int target=-5;
+        int so=longsubtar(arr,target);
+        System.out.println(so);
         int sol=optimalApproach(arr,target);
         System.out.println(sol);
 

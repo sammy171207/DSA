@@ -52,6 +52,8 @@ public class CountInversion {
     }
     public static void main(String[] args) {
         int []arr={10, 10, 10};
+        int bru=inversionCnt(arr);
+        System.out.println(bru);
         int ans=opApproach(arr);
         System.out.println(ans);
     }

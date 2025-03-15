@@ -9,6 +9,7 @@ public class RotatedString {
     public static void main(String[] args) {
       String s="abcde";
       String goal="cdeab";
+        System.out.println(s+goal);
       boolean ans= rotate(s,goal);
         System.out.println("check that s can be goal after shifting the variable :"+ ans);
     }

@@ -22,7 +22,7 @@ public class Basic {
         }
         return arr;
     }
-
+    /// bubble sort using recursion
     static void reversesort(int[]arr,int n){
         if(n==1) return;
         for(int i=0;i<n-2;i++){

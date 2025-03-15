@@ -9,7 +9,8 @@ public class StringCompression {
         char ch=word.charAt(0);
         for(int i=1;i<n;i++){
             if(word.charAt(i)==ch && cnt<9){
-            cnt++;}
+            cnt++;
+            }
             else{
                 str.append(cnt).append(ch);
                 cnt=1;
@@ -23,7 +24,7 @@ public class StringCompression {
     }
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
-        String s=sc.nextLine();
+        String s=sc.nextLine();//abcdecdeab
         System.out.println(comps(s));
     }
 }
