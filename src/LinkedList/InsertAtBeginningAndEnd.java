@@ -12,12 +12,14 @@ public class InsertAtBeginningAndEnd {
         list.addLast(val);
         return list;
     }
+
     public static void main(String[] args) {
         LinkedList<Integer> list=new LinkedList<>();
         list.add(10);
         list.add(15);
         list.add(20);
        LinkedList<Integer>result=insertAtBeginning(list,5);
+
 
         LinkedList<Integer>lastadd=insertAtEnd(list,25);
       Iterator<Integer>li= lastadd.iterator();
