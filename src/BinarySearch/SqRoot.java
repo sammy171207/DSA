@@ -30,16 +30,27 @@ public class SqRoot {
          }
          return ans;
        }
+
+       static int findXo(int A,int B,int C,int K){
+           int ans=Integer.MAX_VALUE;
+           int left=1,right=K;
+           while(left<right){
+             int mid=Math.abs(left+(right-left)/2);
+             int val= (int) (A*Math.pow(mid,mid)+B*mid+C);
+             if(val>=K){
+                 ans=Math.min(ans,mid);
+                 right=mid-1;
+             }else{
+                 left=mid+1;
+             }
+           }
+           return ans;
+       }
     public static void main(String[] args) {
-//      char[][] matrix = {
-//                {'1', '0', '1', '0', '0'},
-//                {'1', '0', '1', '1', '1'},
-//                {'1', '1', '1', '1', '1'},
-//                {'1', '0', '0', '1', '0'}
-//        };
-//
-//    maximalSq(matrix);
-        System.out.println(sqrt(4));
+   int A=3,B=2,C=4;
+   int K=500;
+   int find=findXo(A,B,C,K);
+        System.out.println(find);
 
     }
 }
