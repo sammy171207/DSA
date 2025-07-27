@@ -22,10 +22,26 @@ public class FirstAndLast {
 
         return -1;
     }
+
+    static  void occurence(int[]arr,int target){
+        int first=-1;
+        int last=-1;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==target){
+                if(first==-1){
+                    first=i;
+
+                }
+                    last=i;
+
+            }
+        }
+        System.out.println(first+" "+last);
+    }
     public static void main(String[] args) {
         int []arr={5,7,7,8,8,10};
-        int target=8;
-        System.out.println(searchRange(arr,target));
+        int target=7;
+        occurence(arr,target);
 //        int []ans =searchRange(arr,target);
 //        for(int x:ans){
 //            System.out.print (x);
