@@ -19,5 +19,6 @@ public class MInimizeHeight {
         int []arr={1, 5, 8, 10};
         int k=2;
        int sol= minimumheight(arr,k);
+        System.out.println(sol);
     }
 }

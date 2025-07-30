@@ -46,11 +46,43 @@ public class SqRoot {
            }
            return ans;
        }
+
+       static int sqrootBinary(int n){
+           int low=0,high=n;
+           int ans=-1;
+           while(low<=high){
+               int mid=low+(high-low)/2;
+               int sq=mid*mid;
+               if(sq==n){
+                   return mid;
+               }
+                if(sq<n){
+                    ans=mid;
+                    low=mid+1;
+                }else{
+                    high=mid-1;
+                }
+           }
+           return  ans;
+       }
+
+//       static  int rootMByK(int m,int k){
+//           int low=0,high=m;
+//           int ans=-1;
+//           while(low<=high){
+//               int mid=low+(high-low)/2;
+//               int root= (int) Math.pow(m,k);
+//               if(root=)
+//           }
+//       }
     public static void main(String[] args) {
-   int A=3,B=2,C=4;
-   int K=500;
-   int find=findXo(A,B,C,K);
-        System.out.println(find);
+//   int A=3,B=2,C=4;
+//   int K=500;
+//   int find=findXo(A,B,C,K);
+//        System.out.println(find);
+        int n=28;
+        int ans=sqrootBinary(n);
+        System.out.println(ans);
 
     }
 }

@@ -22,13 +22,12 @@ public class PrintArrayRec {
     }
 
     static void sumOfArray(int []arr,int idx,int sum){
-        if(idx==arr.length){
-            System.out.println("Sum of element :"+sum);
-            return ;
-        }
-        sum+=arr[idx];
-        sumOfArray(arr,idx+1,sum);
-
+      if(idx==arr.length){
+          System.out.println(sum);
+          return;
+      }
+      sum+=arr[idx];
+      sumOfArray(arr,idx+1,sum);
     }
 
     static int power(int a, int b){
@@ -41,10 +40,10 @@ public class PrintArrayRec {
     public static void main(String[] args) {
 
     int [] arr={1,2,3,4,6,7};
-    print(arr,0);
-    maxValue(arr,0,0);
+//    print(arr,0);
+//    maxValue(arr,0,0);
     sumOfArray(arr,0,0);
-        System.out.println( power(2,5));
+//        System.out.println( power(2,5));
 
     }
 }
