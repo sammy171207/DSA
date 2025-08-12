@@ -6,8 +6,9 @@ import java.util.List;
 public class AllSubarThatSumEqualtoTarget {
     static void subarrequaltosum(int idx,int []arr,List<Integer>current,List<List<Integer>>res,int s,int sum){
         if(idx==arr.length){
-           if(sum%2==s){
+           if(sum==s){
                res.add(new ArrayList<>(current));
+               return;
            }
            return;
         }
@@ -34,13 +35,13 @@ public class AllSubarThatSumEqualtoTarget {
     }
     public static void main(String[] args) {
         int[]arr={1,2,3,1,2};
-//        int sum=3;
+        int sum=3;
         int initSum=0;
         List<Integer>li=new ArrayList<>();
         List<List<Integer>>res=new ArrayList<>();
-//        subarrequaltosum(0,arr,li,res,initSum,sum);
+        subarrequaltosum(0,arr,li,res,initSum,sum);
 
-        sumtoOdd(0,arr,li,res,initSum);
+//        sumtoOdd(0,arr,li,res,initSum);
                 for (List<Integer> r : res) {
             System.out.println(r);
         };
