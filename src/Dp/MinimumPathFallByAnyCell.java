@@ -5,7 +5,6 @@ public class MinimumPathFallByAnyCell {
         int n = grid.length;
         int m = grid[0].length;
         int[][] dp = new int[n][m];
-
         // Initialize dp with -1 (unvisited)
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
